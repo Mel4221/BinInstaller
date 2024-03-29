@@ -1,0 +1,15 @@
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\bin\Debug\BinInstaller.exe.config
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\bin\Debug\BinInstaller.exe
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\bin\Debug\BinInstaller.pdb
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\bin\Debug\QuickTools.dll
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\bin\Debug\QuickTools.xml
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\obj\Debug\BinInstaller.csproj.AssemblyReference.cache
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\obj\Debug\BinInstaller.csproj.SuggestedBindingRedirects.cache
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\obj\Debug\BinInstaller.BinInstaller.resources
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\obj\Debug\BinInstaller.Properties.Resources.resources
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\obj\Debug\BinInstaller.Sources.resources
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\obj\Debug\BinInstaller.csproj.GenerateResource.cache
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\obj\Debug\BinInstaller.csproj.CoreCompileInputs.cache
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\obj\Debug\BinInstaller.csproj.CopyComplete
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\obj\Debug\BinInstaller.exe
+C:\Users\Melquiceded\Documents\csharp\BinInstaller\obj\Debug\BinInstaller.pdb
