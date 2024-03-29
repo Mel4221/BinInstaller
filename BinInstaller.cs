@@ -13,6 +13,7 @@ using QuickTools.QCore;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.IO;
+using System.Diagnostics;
 
 namespace BinInstaller
 {
@@ -248,6 +249,17 @@ namespace BinInstaller
 				}
 				
 			}
+		}
+
+		private void PackageSource_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			if(this.PackageSource.Text != "_")
+			{
+				ProcessStartInfo info = new ProcessStartInfo();
+				info.FileName = this.PackageSource.Text;
+				Process.Start(info);
+			}
+			
 		}
 	}
 }

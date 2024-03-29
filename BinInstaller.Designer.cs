@@ -47,13 +47,13 @@
 			this.PackageId = new System.Windows.Forms.Label();
 			this.PackageSize = new System.Windows.Forms.Label();
 			this.PackageCreator = new System.Windows.Forms.Label();
-			this.PackageDescription = new System.Windows.Forms.Label();
 			this.PackageDate = new System.Windows.Forms.Label();
-			this.PackageSource = new System.Windows.Forms.Label();
 			this.ProgressBar = new System.Windows.Forms.ProgressBar();
 			this.CurrentStatus = new System.Windows.Forms.Label();
 			this.DownloadPackage = new System.Windows.Forms.Button();
 			this.Worker = new System.ComponentModel.BackgroundWorker();
+			this.PackageSource = new System.Windows.Forms.LinkLabel();
+			this.PackageDescription = new System.Windows.Forms.RichTextBox();
 			((System.ComponentModel.ISupportInitialize)(this.BinInstallerCloseBtn)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -62,7 +62,7 @@
 			this.WelcomeLabel.AutoSize = true;
 			this.WelcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.WelcomeLabel.ForeColor = System.Drawing.Color.White;
-			this.WelcomeLabel.Location = new System.Drawing.Point(29, 34);
+			this.WelcomeLabel.Location = new System.Drawing.Point(731, 24);
 			this.WelcomeLabel.Name = "WelcomeLabel";
 			this.WelcomeLabel.Size = new System.Drawing.Size(351, 37);
 			this.WelcomeLabel.TabIndex = 0;
@@ -85,7 +85,7 @@
 			// 
 			this.PackagesAvailables.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.PackagesAvailables.FormattingEnabled = true;
-			this.PackagesAvailables.Location = new System.Drawing.Point(214, 380);
+			this.PackagesAvailables.Location = new System.Drawing.Point(227, 129);
 			this.PackagesAvailables.Name = "PackagesAvailables";
 			this.PackagesAvailables.Size = new System.Drawing.Size(519, 37);
 			this.PackagesAvailables.TabIndex = 2;
@@ -97,7 +97,7 @@
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.Color.White;
-			this.label1.Location = new System.Drawing.Point(49, 374);
+			this.label1.Location = new System.Drawing.Point(62, 123);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(141, 37);
 			this.label1.TabIndex = 3;
@@ -106,12 +106,13 @@
 			// SearchPackage
 			// 
 			this.SearchPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.SearchPackage.Location = new System.Drawing.Point(754, 377);
+			this.SearchPackage.Location = new System.Drawing.Point(924, 126);
 			this.SearchPackage.Name = "SearchPackage";
 			this.SearchPackage.Size = new System.Drawing.Size(111, 41);
 			this.SearchPackage.TabIndex = 4;
 			this.SearchPackage.Text = "Search";
 			this.SearchPackage.UseVisualStyleBackColor = true;
+			this.SearchPackage.Visible = false;
 			this.SearchPackage.Click += new System.EventHandler(this.SearchPackage_Click);
 			// 
 			// label2
@@ -119,7 +120,7 @@
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.ForeColor = System.Drawing.Color.White;
-			this.label2.Location = new System.Drawing.Point(49, 473);
+			this.label2.Location = new System.Drawing.Point(62, 222);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(78, 37);
 			this.label2.TabIndex = 5;
@@ -130,7 +131,7 @@
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.Color.White;
-			this.label3.Location = new System.Drawing.Point(49, 529);
+			this.label3.Location = new System.Drawing.Point(62, 278);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(124, 37);
 			this.label3.TabIndex = 7;
@@ -141,7 +142,7 @@
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label4.ForeColor = System.Drawing.Color.White;
-			this.label4.Location = new System.Drawing.Point(49, 585);
+			this.label4.Location = new System.Drawing.Point(807, 510);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(177, 37);
 			this.label4.TabIndex = 9;
@@ -152,7 +153,7 @@
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label5.ForeColor = System.Drawing.Color.White;
-			this.label5.Location = new System.Drawing.Point(49, 423);
+			this.label5.Location = new System.Drawing.Point(62, 172);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(43, 37);
 			this.label5.TabIndex = 10;
@@ -163,18 +164,18 @@
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label6.ForeColor = System.Drawing.Color.White;
-			this.label6.Location = new System.Drawing.Point(49, 642);
+			this.label6.Location = new System.Drawing.Point(68, 339);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(84, 37);
+			this.label6.Size = new System.Drawing.Size(228, 37);
 			this.label6.TabIndex = 11;
-			this.label6.Text = "Date";
+			this.label6.Text = "Compiled Date";
 			// 
 			// label7
 			// 
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label7.ForeColor = System.Drawing.Color.White;
-			this.label7.Location = new System.Drawing.Point(49, 700);
+			this.label7.Location = new System.Drawing.Point(68, 397);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(118, 37);
 			this.label7.TabIndex = 12;
@@ -182,7 +183,7 @@
 			// 
 			// DependencyFiles
 			// 
-			this.DependencyFiles.Location = new System.Drawing.Point(56, 812);
+			this.DependencyFiles.Location = new System.Drawing.Point(69, 561);
 			this.DependencyFiles.Name = "DependencyFiles";
 			this.DependencyFiles.Size = new System.Drawing.Size(290, 233);
 			this.DependencyFiles.TabIndex = 13;
@@ -193,7 +194,7 @@
 			this.PackageDependencryFiles.AutoSize = true;
 			this.PackageDependencryFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.PackageDependencryFiles.ForeColor = System.Drawing.Color.White;
-			this.PackageDependencryFiles.Location = new System.Drawing.Point(49, 761);
+			this.PackageDependencryFiles.Location = new System.Drawing.Point(62, 510);
 			this.PackageDependencryFiles.Name = "PackageDependencryFiles";
 			this.PackageDependencryFiles.Size = new System.Drawing.Size(306, 37);
 			this.PackageDependencryFiles.TabIndex = 14;
@@ -204,7 +205,7 @@
 			this.PackageDependencyDirs.AutoSize = true;
 			this.PackageDependencyDirs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.PackageDependencyDirs.ForeColor = System.Drawing.Color.White;
-			this.PackageDependencyDirs.Location = new System.Drawing.Point(387, 761);
+			this.PackageDependencyDirs.Location = new System.Drawing.Point(400, 510);
 			this.PackageDependencyDirs.Name = "PackageDependencyDirs";
 			this.PackageDependencyDirs.Size = new System.Drawing.Size(346, 37);
 			this.PackageDependencyDirs.TabIndex = 15;
@@ -212,7 +213,7 @@
 			// 
 			// DependencyDirs
 			// 
-			this.DependencyDirs.Location = new System.Drawing.Point(394, 812);
+			this.DependencyDirs.Location = new System.Drawing.Point(407, 561);
 			this.DependencyDirs.Name = "DependencyDirs";
 			this.DependencyDirs.Size = new System.Drawing.Size(339, 233);
 			this.DependencyDirs.TabIndex = 16;
@@ -223,7 +224,7 @@
 			this.PackageId.AutoSize = true;
 			this.PackageId.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.PackageId.ForeColor = System.Drawing.Color.White;
-			this.PackageId.Location = new System.Drawing.Point(448, 423);
+			this.PackageId.Location = new System.Drawing.Point(461, 172);
 			this.PackageId.Name = "PackageId";
 			this.PackageId.Size = new System.Drawing.Size(35, 37);
 			this.PackageId.TabIndex = 17;
@@ -234,7 +235,7 @@
 			this.PackageSize.AutoSize = true;
 			this.PackageSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.PackageSize.ForeColor = System.Drawing.Color.White;
-			this.PackageSize.Location = new System.Drawing.Point(413, 473);
+			this.PackageSize.Location = new System.Drawing.Point(426, 222);
 			this.PackageSize.Name = "PackageSize";
 			this.PackageSize.Size = new System.Drawing.Size(35, 37);
 			this.PackageSize.TabIndex = 18;
@@ -245,44 +246,22 @@
 			this.PackageCreator.AutoSize = true;
 			this.PackageCreator.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.PackageCreator.ForeColor = System.Drawing.Color.White;
-			this.PackageCreator.Location = new System.Drawing.Point(367, 529);
+			this.PackageCreator.Location = new System.Drawing.Point(380, 278);
 			this.PackageCreator.Name = "PackageCreator";
 			this.PackageCreator.Size = new System.Drawing.Size(35, 37);
 			this.PackageCreator.TabIndex = 19;
 			this.PackageCreator.Text = "_";
-			// 
-			// PackageDescription
-			// 
-			this.PackageDescription.AutoSize = true;
-			this.PackageDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.PackageDescription.ForeColor = System.Drawing.Color.White;
-			this.PackageDescription.Location = new System.Drawing.Point(367, 585);
-			this.PackageDescription.Name = "PackageDescription";
-			this.PackageDescription.Size = new System.Drawing.Size(20, 22);
-			this.PackageDescription.TabIndex = 20;
-			this.PackageDescription.Text = "_";
 			// 
 			// PackageDate
 			// 
 			this.PackageDate.AutoSize = true;
 			this.PackageDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.PackageDate.ForeColor = System.Drawing.Color.White;
-			this.PackageDate.Location = new System.Drawing.Point(407, 642);
+			this.PackageDate.Location = new System.Drawing.Point(426, 339);
 			this.PackageDate.Name = "PackageDate";
 			this.PackageDate.Size = new System.Drawing.Size(35, 37);
 			this.PackageDate.TabIndex = 21;
 			this.PackageDate.Text = "_";
-			// 
-			// PackageSource
-			// 
-			this.PackageSource.AutoSize = true;
-			this.PackageSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.PackageSource.ForeColor = System.Drawing.Color.White;
-			this.PackageSource.Location = new System.Drawing.Point(373, 700);
-			this.PackageSource.Name = "PackageSource";
-			this.PackageSource.Size = new System.Drawing.Size(35, 37);
-			this.PackageSource.TabIndex = 22;
-			this.PackageSource.Text = "_";
 			// 
 			// ProgressBar
 			// 
@@ -306,7 +285,7 @@
 			// DownloadPackage
 			// 
 			this.DownloadPackage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.DownloadPackage.Location = new System.Drawing.Point(883, 377);
+			this.DownloadPackage.Location = new System.Drawing.Point(766, 129);
 			this.DownloadPackage.Name = "DownloadPackage";
 			this.DownloadPackage.Size = new System.Drawing.Size(138, 41);
 			this.DownloadPackage.TabIndex = 26;
@@ -322,18 +301,38 @@
 			this.Worker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.Worker_ProgressChanged);
 			this.Worker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.Worker_RunWorkerCompleted);
 			// 
+			// PackageSource
+			// 
+			this.PackageSource.AutoSize = true;
+			this.PackageSource.LinkColor = System.Drawing.Color.White;
+			this.PackageSource.Location = new System.Drawing.Point(355, 414);
+			this.PackageSource.Name = "PackageSource";
+			this.PackageSource.Size = new System.Drawing.Size(18, 20);
+			this.PackageSource.TabIndex = 27;
+			this.PackageSource.TabStop = true;
+			this.PackageSource.Text = "_";
+			this.PackageSource.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.PackageSource_LinkClicked);
+			// 
+			// PackageDescription
+			// 
+			this.PackageDescription.Location = new System.Drawing.Point(814, 561);
+			this.PackageDescription.Name = "PackageDescription";
+			this.PackageDescription.Size = new System.Drawing.Size(402, 233);
+			this.PackageDescription.TabIndex = 28;
+			this.PackageDescription.Text = "";
+			// 
 			// BinInstaller
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(60)))), ((int)(((byte)(80)))));
 			this.ClientSize = new System.Drawing.Size(1461, 1097);
+			this.Controls.Add(this.PackageDescription);
+			this.Controls.Add(this.PackageSource);
 			this.Controls.Add(this.DownloadPackage);
 			this.Controls.Add(this.CurrentStatus);
 			this.Controls.Add(this.ProgressBar);
-			this.Controls.Add(this.PackageSource);
 			this.Controls.Add(this.PackageDate);
-			this.Controls.Add(this.PackageDescription);
 			this.Controls.Add(this.PackageCreator);
 			this.Controls.Add(this.PackageSize);
 			this.Controls.Add(this.PackageId);
@@ -385,12 +384,12 @@
 		private System.Windows.Forms.Label PackageId;
 		private System.Windows.Forms.Label PackageSize;
 		private System.Windows.Forms.Label PackageCreator;
-		private System.Windows.Forms.Label PackageDescription;
 		private System.Windows.Forms.Label PackageDate;
-		private System.Windows.Forms.Label PackageSource;
 		private System.Windows.Forms.ProgressBar ProgressBar;
 		private System.Windows.Forms.Label CurrentStatus;
 		private System.Windows.Forms.Button DownloadPackage;
 		private System.ComponentModel.BackgroundWorker Worker;
+		private System.Windows.Forms.LinkLabel PackageSource;
+		private System.Windows.Forms.RichTextBox PackageDescription;
 	}
 }
